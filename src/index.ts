@@ -1,3 +1,5 @@
+"use client"
+
 import OnMetaWidget from "./components/OnMetaWidget";
 
 export * from "./core/store";

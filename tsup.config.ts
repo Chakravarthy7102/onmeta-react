@@ -3,7 +3,7 @@ import { defineConfig } from "tsup";
 export default defineConfig({
 	dts: true,
 	minify: true,
-    splitting: false,
+	splitting: false,
 	sourcemap: true,
 	clean: true,
 	outDir: "dist",

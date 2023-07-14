@@ -5,7 +5,7 @@ import CrossIcon from "@/icons/CrossIcon";
 
 import "../index.css";
 
-export interface OnMetaConfigI {
+interface OnMetaConfigI {
 	apiKey: string;
 	walletAddress: string;
 	fiatAmount: number;
@@ -32,8 +32,8 @@ export default function OnMetaWidget({
 		...onMetaConfig
 	},
 }: OnMetaProps) {
-	const widgetRef = useRef<any | null>(null);
 	const isOnMetaWidgetOpen = useStore();
+	const widgetRef = useRef<any | null>(null);
 
 	useEffect(() => {
 		const script = document.createElement("script");
