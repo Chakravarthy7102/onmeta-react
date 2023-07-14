@@ -1,6 +1,4 @@
-import _ from "react";
-
-declare global {
+export declare global {
 	interface Window {
 		onMetaWidget: any;
 	}
