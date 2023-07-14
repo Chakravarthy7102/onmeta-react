@@ -11,6 +11,9 @@
 # testing
 /coverage
 
+# bundle-size
+esbuild-why*
+
 # production
 /dist
 
