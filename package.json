@@ -3,6 +3,13 @@
 	"version": "1.0.0",
 	"description": "Onmeta React SDK",
 	"main": "index.js",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.js"
+		}
+	},
 	"tsup": {
 		"entry": [
 			"src/index.ts"
@@ -12,6 +19,7 @@
 		"clean": true
 	},
 	"scripts": {
+		"start": "tsup --watch",
 		"build": "tsup"
 	},
 	"repository": {
@@ -30,6 +38,13 @@
 	},
 	"homepage": "https://github.com/Chakravarthy7102/onmeta-react#readme",
 	"devDependencies": {
+		"@types/react": "^18.0.15",
+		"@types/react-dom": "^18.0.6",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
 		"tsup": "^7.1.0"
+	},
+	"dependencies": {
+		"wagmi": "^1.3.8"
 	}
 }

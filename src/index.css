@@ -1,0 +1,14 @@
+.onmeta__widget {
+	position: fixed;
+	inset: 0;
+	backdrop-filter: blur(10px);
+	padding-top: 7rem;
+	height: 100vh;
+	z-index: 50;
+}
+
+.icon {
+	height: 3rem;
+	width: 3rem;
+	margin-left: 2rem;
+}
