@@ -22,10 +22,16 @@ export interface OnMetaConfigI {
 	failureRedirectUrl?: string;
 }
 
+interface OnMetaProps {
+	config: OnMetaConfigI;
+}
+
 export default function OnMetaWidget({
-	onMetaScript = "https://stg.platform.onmeta.in/onmeta-sdk.js",
-	...onMetaConfig
-}: OnMetaConfigI) {
+	config: {
+		onMetaScript = "https://stg.platform.onmeta.in/onmeta-sdk.js",
+		...onMetaConfig
+	},
+}: OnMetaProps) {
 	const widgetRef = useRef<any | null>(null);
 	const isOnMetaWidgetOpen = useStore();
 

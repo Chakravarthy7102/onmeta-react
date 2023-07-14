@@ -1,3 +1,5 @@
-export * from "./components/OnMetaWidget";
+import OnMetaWidget from "./components/OnMetaWidget";
 
-export { closeWidget, openWidget } from "./core/store";
+export * from "./core/store";
+
+export default OnMetaWidget;

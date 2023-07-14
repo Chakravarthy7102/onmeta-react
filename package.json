@@ -20,7 +20,8 @@
 	},
 	"scripts": {
 		"start": "tsup --watch",
-		"build": "tsup"
+		"build": "tsup",
+		"size": "size-limit"
 	},
 	"repository": {
 		"type": "git",
@@ -57,14 +58,6 @@
 		{
 			"path": "dist/index.mjs",
 			"limit": "5 KB"
-		},
-		{
-			"path": "headless/index.js",
-			"limit": "2 KB"
-		},
-		{
-			"path": "headless/index.mjs",
-			"limit": "2 KB"
 		}
 	]
 }
