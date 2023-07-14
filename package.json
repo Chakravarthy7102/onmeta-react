@@ -1,0 +1,35 @@
+{
+	"name": "onmeta-react",
+	"version": "1.0.0",
+	"description": "Onmeta React SDK",
+	"main": "index.js",
+	"tsup": {
+		"entry": [
+			"src/index.ts"
+		],
+		"splitting": false,
+		"sourcemap": true,
+		"clean": true
+	},
+	"scripts": {
+		"build": "tsup"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Chakravarthy7102/onmeta-react.git"
+	},
+	"keywords": [
+		"onmeta",
+		"react",
+		"sdk"
+	],
+	"author": "Chakravarthi Medicharla",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Chakravarthy7102/onmeta-react/issues"
+	},
+	"homepage": "https://github.com/Chakravarthy7102/onmeta-react#readme",
+	"devDependencies": {
+		"tsup": "^7.1.0"
+	}
+}
