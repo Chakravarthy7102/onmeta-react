@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
+import { css, setup } from "goober";
 
 import useStore, { closeWidget } from "@/core/store";
 import CrossIcon from "@/icons/CrossIcon";
-import { css, setup, styled } from "goober";
 
 setup(React.createElement);
 
@@ -27,19 +27,25 @@ export interface OnMetaProps {
 	config: OnMetaConfigI;
 }
 
-const WidgetContainer = styled("div")`
+const widget__container = css`
+	height: 100vh;
 	position: fixed;
 	inset: 0;
-	backdrop-filter: blur(10px);
-	padding-top: 7rem;
+	backdrop-filter: blur(4px);
+	`;
+
+const widget = css`
 	height: 100vh;
-	z-index: 99999;
+	position: fixed;
+	padding-top: 2rem;
+	inset: 0;
 `;
 
 const icon = css`
-	height: 3rem;
-	width: 3rem;
+	height: 2rem;
+	width: 2rem;
 	margin-left: 2rem;
+	cursor: pointer;
 `;
 
 export default function OnMetaWidget({
@@ -75,9 +81,11 @@ export default function OnMetaWidget({
 	return (
 		<>
 			{isOnMetaWidgetOpen ? (
-				<WidgetContainer id="widget">
-					<CrossIcon className={icon} onClick={closeWidget} />
-				</WidgetContainer>
+				<div className={widget__container}>
+					<div className={widget} id="widget">
+						<CrossIcon className={icon} onClick={closeWidget} />
+					</div>
+				</div>
 			) : null}
 		</>
 	);

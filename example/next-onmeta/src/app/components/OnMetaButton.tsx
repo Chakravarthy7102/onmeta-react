@@ -3,9 +3,8 @@
 import OnMetaWidget, { openWidget } from "onmeta-react";
 
 export default function OnMetaButton() {
-	function handleClick(){
-		openWidget()
-		alert("Yo")
+	function handleClick() {
+		openWidget();
 	}
 	return (
 		<>
@@ -15,14 +14,6 @@ export default function OnMetaButton() {
 			>
 				open widget
 			</button>
-			<OnMetaWidget
-				config={{
-					apiKey: "12333",
-					fiatAmount: 100,
-					tokenAddress: "0x0000000000000000000000",
-					walletAddress: "0x23eeeeeeeeeeeeeeeeeee",
-				}}
-			/>
 		</>
 	);
 }
