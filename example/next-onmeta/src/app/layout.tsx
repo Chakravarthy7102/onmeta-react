@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 
+import OnMetaWidget from "onmeta-react";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -17,14 +19,14 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={inter.className}>
 				{children}
-				{/* <OnMetaWidget
+				<OnMetaWidget
 					config={{
 						apiKey: "",
 						fiatAmount: 100,
 						tokenAddress: "0xeeeeeeeeeeeeeeeeeeeeee",
 						walletAddress: "0xExmapleWalletAdress",
 					}}
-				/> */}
+				/>
 			</body>
 		</html>
 	);
