@@ -1,26 +1,31 @@
 import { useEffect, useState } from "react";
 
 let isOnMetaWidgetOpen: boolean = false;
-let mutateState: React.Dispatch<React.SetStateAction<boolean>>;
+let mutateState: React.Dispatch<React.SetStateAction<boolean>> | null;
 
 export const closeWidget = () => {
 	isOnMetaWidgetOpen = false;
-	mutateState(false);
+	listener(false);
 };
 
 export const openWidget = () => {
 	isOnMetaWidgetOpen = true;
-	mutateState(true);
+	listener(true);
+};
+
+const listener = (value: boolean) => {
+	if (mutateState) mutateState(value);
 };
 
 export default function useStore(initalState: boolean = isOnMetaWidgetOpen) {
 	const [state, setState] = useState(initalState);
 
-	console.log({ state });
-
 	useEffect(() => {
-		console.log("render")
 		mutateState = setState;
+
+		return () => {
+			if (mutateState) mutateState = null;
+		};
 	}, [state]);
 
 	return state;

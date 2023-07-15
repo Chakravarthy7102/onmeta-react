@@ -32,7 +32,7 @@ const widget__container = css`
 	position: fixed;
 	inset: 0;
 	backdrop-filter: blur(4px);
-	`;
+`;
 
 const widget = css`
 	height: 100vh;
@@ -58,25 +58,31 @@ export default function OnMetaWidget({
 	const widgetRef = useRef<any | null>(null);
 
 	useEffect(() => {
-		const script = document.createElement("script");
-		script.src = onMetaScript;
-		script.async = true;
-		document.head.appendChild(script);
-
-		script.onload = () => {
-			widgetRef.current = new window.onMetaWidget({
-				elementId: "widget",
-				...onMetaConfig,
+		if (isOnMetaWidgetOpen) {
+			const script = document.createElement("script");
+			script.src = onMetaScript;
+			script.async = true;
+			console.info({
+				head: window.document.head,
+				header: document,
 			});
+			window.document.head.appendChild(script);
 
-			widgetRef.current.init();
+			script.onload = () => {
+				widgetRef.current = new window.onMetaWidget({
+					elementId: "widget",
+					...onMetaConfig,
+				});
 
-			//@todo: listen to this events with observers.
-			widgetRef.current.on("ALL_EVENTS", (data: unknown) =>
-				console.log("ALL_EVENTS --> ", data)
-			);
-		};
-	}, []);
+				widgetRef.current.init();
+
+				//@todo: listen to this events with observers.
+				widgetRef.current.on("ALL_EVENTS", (data: unknown) =>
+					console.log("ALL_EVENTS --> ", data)
+				);
+			};
+		}
+	}, [isOnMetaWidgetOpen]);
 
 	return (
 		<>
