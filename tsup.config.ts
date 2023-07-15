@@ -9,4 +9,5 @@ export default defineConfig({
 	outDir: "dist",
 	format: ["esm", "cjs"],
 	entry: ["src/index.ts"],
+	external:["react","react-dom"]
 });

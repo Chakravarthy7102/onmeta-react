@@ -4,6 +4,7 @@
 	"description": "Onmeta React SDK",
 	"main": "index.js",
 	"exports": {
+		"./package.json": "./package.json",
 		".": {
 			"types": "./dist/index.d.ts",
 			"import": "./dist/index.mjs",
@@ -63,5 +64,12 @@
 			"path": "dist/index.mjs",
 			"limit": "5 KB"
 		}
-	]
+	],
+	"engines": {
+		"node": ">=10"
+	},
+	"peerDependencies": {
+		"react": ">=16",
+		"react-dom": ">=16"
+	}
 }

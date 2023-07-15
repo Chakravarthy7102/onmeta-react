@@ -5,7 +5,7 @@ import CrossIcon from "@/icons/CrossIcon";
 
 import "../index.css";
 
-interface OnMetaConfigI {
+export interface OnMetaConfigI {
 	apiKey: string;
 	walletAddress: string;
 	fiatAmount: number;
@@ -22,7 +22,7 @@ interface OnMetaConfigI {
 	failureRedirectUrl?: string;
 }
 
-interface OnMetaProps {
+export interface OnMetaProps {
 	config: OnMetaConfigI;
 }
 
