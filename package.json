@@ -2,7 +2,8 @@
 	"name": "onmeta-react",
 	"version": "1.0.0",
 	"description": "Onmeta React SDK",
-	"main": "index.js",
+	"main": "dist/index.js",
+	"types":"dist/index.d.ts",
 	"exports": {
 		"./package.json": "./package.json",
 		".": {
@@ -28,6 +29,7 @@
 		"type": "git",
 		"url": "git+https://github.com/Chakravarthy7102/onmeta-react.git"
 	},
+	"files":["dist"],
 	"keywords": [
 		"onmeta",
 		"react",
