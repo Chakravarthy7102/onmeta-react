@@ -1836,10 +1836,10 @@ onetime@^6.0.0:
   dependencies:
     mimic-fn "^4.0.0"
 
-onmeta-react@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/onmeta-react/-/onmeta-react-1.0.1.tgz#7afc503e144c79c9e8d33ccc943bfcd90c6c4d9f"
-  integrity sha512-JBEWohSNuvly3b6+W1wAahyx68vti7xyHfvq0O5QjruGbYfI3HpGNDP7BbeJd7ROWpl317dOPm+6duwR7jUXMA==
+onmeta-react@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/onmeta-react/-/onmeta-react-0.1.5.tgz#c3707ff52f8155b7ef2a33e2f614f7f863255da7"
+  integrity sha512-ctRtCA/SiP6Ctc6YsrwSEqcS04rXqw5ZrhjVt2zmeodDdooYiL0yTGHxl5n6T47ay2IxkJQq2Xg6FoIqRBH1aw==
   dependencies:
     goober "^2.1.13"
 

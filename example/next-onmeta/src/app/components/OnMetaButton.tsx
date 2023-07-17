@@ -1,8 +1,22 @@
 "use client";
 
-import { openWidget } from "onmeta-react";
+import { openWidget, useOnMetaEvents } from "onmeta-react";
+import { useEffect } from "react";
 
 export default function OnMetaButton() {
+	const { subscriber, unsubscribe } = useOnMetaEvents();
+
+	function listener(data: unknown) {
+		console.log(data);
+	}
+
+	useEffect(() => {
+		subscriber(listener);
+		return () => {
+			unsubscribe(listener);
+		};
+	}, []);
+
 	return (
 		<>
 			<button
