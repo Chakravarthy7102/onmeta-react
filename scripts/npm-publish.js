@@ -15,5 +15,9 @@ const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"));
 packageJson.version = version;
 fs.writeFileSync("package.json", JSON.stringify(packageJson, null, 2));
 
+//git versioning
+
+execSync(`git add . && git commit -m '${currentVersion}'`);
+
 // Publish the package to npm
-execSync('npm publish', { stdio: 'inherit' });
+execSync("npm publish", { stdio: "inherit" });
