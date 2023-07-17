@@ -1,9 +1,9 @@
 {
 	"name": "onmeta-react",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"description": "Onmeta React SDK",
 	"main": "dist/index.js",
-	"types":"dist/index.d.ts",
+	"types": "dist/index.d.ts",
 	"exports": {
 		"./package.json": "./package.json",
 		".": {
@@ -24,13 +24,15 @@
 		"start": "tsup --watch",
 		"build": "tsup",
 		"size": "size-limit",
-		"publish":"node ./scripts/npm-publish.js"
+		"publish": "node ./scripts/npm-publish.js"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Chakravarthy7102/onmeta-react.git"
 	},
-	"files":["dist"],
+	"files": [
+		"dist"
+	],
 	"keywords": [
 		"onmeta",
 		"react",
