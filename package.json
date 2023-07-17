@@ -1,6 +1,6 @@
 {
   "name": "onmeta-react",
-  "version": "0.1.7",
+  "version": "0.1.10",
   "description": "Onmeta React SDK",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -23,8 +23,7 @@
   "scripts": {
     "start": "tsup --watch",
     "build": "tsup",
-    "size": "size-limit",
-    "publish": "node ./scripts/npm-publish.js"
+    "size": "size-limit"
   },
   "repository": {
     "type": "git",
