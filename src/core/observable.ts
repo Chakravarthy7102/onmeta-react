@@ -22,3 +22,10 @@ class Observable {
 
 // creating a widget event observable.
 export const widgetObeservable = new Observable();
+
+export function useOnMetaEvents() {
+	return {
+		subscriber: widgetObeservable.subscribe,
+		unsubscribe: widgetObeservable.unsubscribe,
+	};
+}
