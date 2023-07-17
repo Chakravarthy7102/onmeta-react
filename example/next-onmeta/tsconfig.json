@@ -21,7 +21,7 @@
 		],
 		"paths": {
 			"@/*": ["./src/*"],
-			"onmeta-react": ["../../dist/index.js"]
+			// "onmeta-react": ["../../dist/index.js"]
 		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
